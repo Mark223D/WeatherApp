@@ -1,7 +1,6 @@
 # WeatherApp
-> The only weather app for minimilists.
 
-![](app_icon.png)
+![](ReadMeResources/app_icon.png)
 
 WeatherApp uses the OpenWeatherMap API in order to give its users a simple and focused forecast.
 

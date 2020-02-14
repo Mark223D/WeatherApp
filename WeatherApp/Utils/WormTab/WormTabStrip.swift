@@ -318,15 +318,16 @@ public class WormTabStrip: UIView,UIScrollViewDelegate {
         natruallySlideContentScrollViewToPosition(index: tab.index!)
         adjustTopScrollViewsContentOffsetX(tab: tab)
         centerCurrentlySelectedWorm(tab: tab)
+        
+        NotificationCenter.default.post(name: .updateWormTab, object: nil)
     }
     
     /*******
      move worm to the correct position with slinding animation when the tabs are clicked
      ********/
     private func natruallySlideWormToPosition(tab:WormTabStripButton){
-        UIView.animate(withDuration: 0.3) {
             self.slideWormToTabPosition(tab: tab)
-        }
+        
     }
     
     private func slideWormToTabPosition(tab:WormTabStripButton){
@@ -380,11 +381,10 @@ public class WormTabStrip: UIView,UIScrollViewDelegate {
      ********/
     private func natruallySlideContentScrollViewToPosition(index:Int){
         let point = CGPoint(x:CGFloat(index)*Width,y: 0)
-        UIView.animate(withDuration: 0.3, animations: {
-                self.contentScrollView.setContentOffset(point, animated: false)
-        }) { (finish) in
-                self.isUserTappingTab = false
-        }
+                self.contentScrollView.setContentOffset(point, animated: true)
+//        }) { (finish) in
+//                self.isUserTappingTab = false
+//        }
         
     }
     
@@ -409,6 +409,7 @@ public class WormTabStrip: UIView,UIScrollViewDelegate {
         currentWormX = tab.frame.origin.x
         currentWormWidth = tab.frame.width
         contentScrollContentOffsetX = scrollView.contentOffset.x
+        
     }
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {

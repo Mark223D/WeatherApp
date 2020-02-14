@@ -13,7 +13,7 @@ class Circle: UIView {
     var circleView: UIBezierPath = UIBezierPath()
     var shapeLayer = CAShapeLayer()
     var size: CGRect?
-    var defaultSize: CGRect = CGRect(x: 0, y: 0, width:400, height: 400) {
+    @IBInspectable var defaultSize: CGRect = CGRect(x: 0, y: 0, width:400, height: 400) {
         didSet {
             self.size = self.defaultSize
         }

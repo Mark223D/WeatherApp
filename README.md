@@ -6,7 +6,6 @@
 WeatherApp uses the OpenWeatherMap API in order to give its users a simple and focused forecast.
 
 
-![](header.png)
 
 ## Installation
 
@@ -25,6 +24,14 @@ WeatherApp uses the OpenWeatherMap API in order to give its users a simple and f
 
 * RxSwift
 * RxCocoa
+
+## Screenshots 
+
+![](ReadMeResources/dark_home.jpg)
+![](ReadMeResources/light_home.jpg)
+![](ReadMeResources/dark_locations.jpg)
+![](ReadMeResources/dark_addLocations.jpg)
+
 
 
 
